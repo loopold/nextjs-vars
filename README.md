@@ -4,6 +4,8 @@ Below is a minimal, environment-independent Next.js 14+ hello-world example usin
 
 We avoid installing Node.js, npm, or running `npx create-next-app@latest hello-next-app` on the local machine, we will generate and build your Next.js app entirely inside a Docker container.
 
+⚠️ I'm not a Next.js developer. This is a DevOps note.
+
 ## Steps to reproduce creating a code
 
 ### Put the code into the app
@@ -37,4 +39,8 @@ Run
 ```sh
 docker run --rm --env-file .env.development -p 3002:3000 my-next-app
 docker run --rm --env-file .env.production -p 3001:3000 my-next-app
+```
+or
+```sh
+docker-compose up -d
 ```

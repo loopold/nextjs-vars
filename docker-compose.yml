@@ -1,0 +1,13 @@
+services:
+  next-app-development:
+    image: my-next-app
+    env_file: .env.development
+    ports:
+      - "3002:3000"
+    restart: unless-stopped
+  next-app-production:
+    image: my-next-app
+    env_file: .env.production
+    ports:
+      - "3001:3000"
+    restart: unless-stopped
