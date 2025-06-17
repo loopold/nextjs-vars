@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "window.__ENV__ = {
+  NEXT_PUBLIC_APP_URL: '${NEXT_PUBLIC_APP_URL}',
+  NEXT_PUBLIC_API_URL: '${NEXT_PUBLIC_API_URL}',
+  NEXT_PUBLIC_STORE_IOS_URL: '${NEXT_PUBLIC_STORE_IOS_URL}',
+  NEXT_PUBLIC_STORE_ANDROID_URL: '${NEXT_PUBLIC_STORE_ANDROID_URL}'
+};" > /app/public/runtime-env.js
+
+exec "$@"
