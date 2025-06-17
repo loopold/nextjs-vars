@@ -26,6 +26,6 @@ cd nextjs-vars
 docker build -t my-next-app .
 
 
-docker run --rm --env-file .env.development -p 3000:3000 my-next-app
+docker run --rm --env-file .env.development -p 3002:3000 my-next-app
 docker run --rm --env-file .env.production -p 3001:3000 my-next-app
 ```
