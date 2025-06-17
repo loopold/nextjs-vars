@@ -23,9 +23,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
-        <script src="/runtime-env.js"></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <script src="/runtime-env.js"></script>
+        {children}
+      </body>
     </html>
   );
 }
