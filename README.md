@@ -15,14 +15,7 @@ docker run --rm -it -v $PWD:/app -w /app node:18-alpine npx create-next-app@late
 ```
 I changed only one default. Code inside a `src/` directory? to `Yes`
 
-### Build an image
-
-```sh
-docker build -t my-next-app .
-docker run -p 3000:3000 my-next-app
-```
-
-Then I made a few changes – you can see these in the commits (and I fixed some typos).
+Then I made a few changes – you can see these in the commits (and I fixed some typos). You can compare Initial commit with later
 
 ---
 
@@ -32,7 +25,7 @@ Get the code and build the image
 ```sh
 git clone https://github.com/loopold/nextjs-vars.git
 cd nextjs-vars
-docker build -t my-next-app .
+docker build -t my-next-app hello-next-app/
 ```
 
 Run
@@ -43,4 +36,10 @@ docker run --rm --env-file .env.production -p 3001:3000 my-next-app
 or
 ```sh
 docker-compose up -d
+```
+
+Clean
+```sh
+docker compose down     # if compose was used
+docker rmi my-next-app:latest
 ```
