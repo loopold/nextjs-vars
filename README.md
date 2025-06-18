@@ -15,7 +15,7 @@ docker run --rm -it -v $PWD:/app -w /app node:18-alpine npx create-next-app@late
 ```
 I changed only one default. Code inside a `src/` directory? to `Yes`
 
-Then I made a few changes – you can see these in the commits (and I fixed some typos). You can compare Initial commit with later
+Then I made a few changes, which you can see in the commits. I also fixed some typos. You can compare the initial commit with a later one by compare commits or tags in GitHub as in `git diff` command. Here is [init...window](https://github.com/loopold/nextjs-vars/compare/init...window) or [window...standalone](https://github.com/loopold/nextjs-vars/compare/window...standalone) comparison.
 
 ---
 
@@ -64,3 +64,8 @@ Result from route handler: Hello from route handler!
 docker compose down     # if compose was used
 docker rmi my-next-app:latest
 ```
+
+## Credits
+
+- [Dockerize Next.js & Deploy to VPS (EASY!)](https://www.youtube.com/watch?v=DfNhBZUrA-U)
+- [React Foundations Chapter 10 - Server and Client Components](https://nextjs.org/learn/react-foundations/server-and-client-components)
